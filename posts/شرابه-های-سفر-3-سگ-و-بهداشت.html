@@ -5,22 +5,52 @@
             <meta charset="UTF-8">
             <title>شرابه‌های سفر ۳: سگ و بهداشت | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">شرابه‌های سفر ۳: سگ و بهداشت</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۲۴ دی ۱۳۹۴</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">شرابه‌های سفر ۳: سگ و بهداشت</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۲۴ دی ۱۳۹۴</div>
                 <div><p style="text-align: justify;"><font face="verdana" size="3">یکی از دروغ‌هایی که در مورد غربی‌ها رایج است، اهمیت دادنشان به بهداشت است. مثلاً می‌گویند این‌ها از بس که در مسألهٔ بهداشت فردی و عمومی پیشرفت داشته‌اند، دیگر حتی نگران نجاست حیوانات خانگی‌شان نیستند. </font></p>
 <p style="text-align: justify;"><font face="verdana" size="3">واقعیت این است که حیوان خانگی -مخصوصاً سگ- به هر دلیلی که هنوز از تحلیل من خارج است، تبدیل به عنصری مقدس در خانواده‌ها شده است. خانم همسایه در سرویس دانشگاه در حال صحبت کردن با راننده: سگم سر ذوق آمد و صورت دختر شیرخواره‌ام را لیسید. تمام صورت دخترم کهیر زده و سرخ شده. بردمش پزشک. پزشک گفته این کودک به سگ‌ها حساسیت دارد و باید هر چه سریع‌تر سگ‌تان را مرخص کنید. ولی من هنوز از حرف پزشک متقاعد نشدم.</font></p>
 <div style="text-align: justify;"><br></div></div>
                 <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/شرابه‌های سفر.html">شرابه‌های سفر</a>، <a href="../tags/سفرنامهٔ امریکا.html">سفرنامهٔ امریکا</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

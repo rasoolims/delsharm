@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۱۷۸: خانهٔ لهستانی‌ها؛ از مرجان شیرمحمدی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۱۷۸: خانهٔ لهستانی‌ها؛ از مرجان شیرمحمدی</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۰۲ مهر ۱۴۰۰</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۱۷۸: خانهٔ لهستانی‌ها؛ از مرجان شیرمحمدی</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۰۲ مهر ۱۴۰۰</div>
                 <div><p style="text-align: center;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;"><img alt="" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1525780425l/36044121.jpg"></span></span></p>
 <p style="text-align: justify;"><br><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">نقد یک‌خطی: عالی است؛ بخوانیدش.</span></span></p>
 <p style="text-align: justify;"> </p>
@@ -23,9 +31,31 @@
 <p style="text-align: justify;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">پی‌نوشت ۱: از بس در این روزگار بازیگران جرأت کتاب‌نویسی یافته‌اند، با دیدی تقریباً منفی به سراغ کتاب رفتم. همان سه چهار صفحهٔ اول فهمیدم که اشتباه بوده است. احتمالاً به زودی بروم سراغ دیگر کار نویسنده که همسرش آن را فیلم کرده است با بازی خود نویسنده و جایزه هم گرفته است.</span></span></p>
 <p style="text-align: justify;"> </p>
 <p style="text-align: justify;"><span style="font-family:Verdana,Geneva,sans-serif;"><span style="font-size:18px;">پی‌نوشت ۲: در باب رمان‌های خوب در فضاسازی محیط این دو کار را توصیه می‌کنم: اندوه مونالیزا از شاهرخ گیوا (نشر چشمه) و آلبوم خانوادگی از مجتبی پورحسن (نشر زاوش).</span></span><br> </p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب.html">کتاب</a>، <a href="../tags/داستان ایرانی.html">داستان ایرانی</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/نقد داستان.html">نقد داستان</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/نقد داستان.html">نقد داستان</a>، <a href="../tags/کتاب.html">کتاب</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/داستان ایرانی.html">داستان ایرانی</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

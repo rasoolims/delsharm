@@ -5,21 +5,51 @@
             <meta charset="UTF-8">
             <title>برچسب: جستارها | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="container">
                 <div class="page-header">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <a href="../index.html" style="float: right; font-weight: bold;">← بازگشت</a>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
-                    <hr style="border: 0; border-top: 1px solid #e0e6ed; margin: 20px 0;">
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
                     <h2 style="margin: 0; font-size: 1.5em; text-align: center;">نوشته‌های دارای برچسب: جستارها</h2>
-                    <p style="color: #7f8c8d; margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
+                    <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
                 </div>
                 <div class="posts-grid">
         <div class="post-card"><a href="../posts/fa.html"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348021421l/13091952.jpg" class="card-img" alt="تصویر پست"></a><div class="card-content"><h2><a href="../posts/fa.html">قفسه‌نوشت ۱۹۳: خیلی دورتر؛ از جاناتان فرنزن</a></h2><div class="date">۱۰ آذر ۱۴۰۰</div><div class="excerpt-container"><p style="text-align: justify;"><span style="font-size:18px;">این کتاب مجموعه مقالات، سخنرانی‌ها و نوشته‌های سال‌های ۱۹۹۸ تا ۲۰۱۰ از «جاناتان فرنزن» نویسنده و داستان‌نویس آمریکایی است. مضمون نوشته‌ها مختلف است. اما می‌شود به چند بخش تقسیمش کرد: نقد دنیای مدرن و فناوری، پرنده‌ها، نقد کتاب دیگران، و نویسندگی. نام کتاب در واقع ترجمهٔ اسم جزیره‌ای دورافتاده است که فرنزن پس از خودکشی دوست نویسنده‌اش، «دیوید فاستر والاس»، به آن پناه می‌برد. او بخشی از خاکستر دوستش را با خودش می‌برد که در آن جزیره بپراکند. این جزیره دقیقاً همان جزیره‌ای است که «رابینسون کروزو» در آن گم شده است و به همین خاطر فرنزن نقبی به فضای ادبیات، تنهایی و چرایی اتفاقات پیرامون ادبیات می‌پردازد.<br> <br>فرنزن پس از سال‌ها درگیری روحی و دل‌زدگی شدید از دنیای مدرن به شکلی جنون‌آمیز به پرنده‌ها علاقه‌مند شده است و برای دیدن گونه‌های نادر پرنده‌ها به جاهای مختلف سر زده است. از دیدگاه پرنده‌دوستی زیاد او بسیاری از نوشته‌هایش در این موضوع خسته‌کننده است اما اطلاعات جانبی که در مورد انقراض پرنده‌ها بر اثر آلودگی هوا، جنگل‌زدایی و ساخت و سازهای بی‌رویه می‌دهد خیلی جالب و البته ترسناک است. او حتی برای بررسی فکرهایش مدتی به چین سفر کرده است و چین را مدرن‌ترین کشور دنیا می‌یابد: از نظر او مدرن‌ترین یعنی کثیف‌ترین و وحشتناک‌ترین. او در اتاق هتلش در طبقهٔ هفتاد و چندم است ولی آنچه روبرویش است دود غلیظ حاصل از وارونگی هواست.</span></p></div><a href="../posts/fa.html" class="read-more">ادامه مطلب ←</a></div></div>
                 </div>
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

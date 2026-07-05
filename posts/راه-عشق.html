@@ -5,32 +5,62 @@
             <meta charset="UTF-8">
             <title>راهِ عشق | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">راهِ عشق</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۳۰ دی ۱۳۸۶</div>
-                <div><p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">آن راه که راهِ عشق با آگاهی</span><span dir="ltr" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">‌</span><span lang="FA" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">ست<p></p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">هر راه دگر رویم، راهی واهی</span><span dir="ltr" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">‌</span><span lang="FA" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">ست<p></p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><p> </p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">شاهنشه دل حسین باشد، آری<p></p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">در کشور دل نظام شاهنشاهی</span><span dir="ltr" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">‌</span><span lang="FA" style="FONT-SIZE: 9pt; COLOR: yellow; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">ست</span><span lang="FA" style="FONT-SIZE: 9pt; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><p></p></span></p>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">راهِ عشق</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۳۰ دی ۱۳۸۶</div>
+                <div><p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">آن راه که راهِ عشق با آگاهی</span><span dir="ltr" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">‌</span><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">ست<p></p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">هر راه دگر رویم، راهی واهی</span><span dir="ltr" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">‌</span><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">ست<p></p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><p> </p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">شاهنشه دل حسین باشد، آری<p></p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">در کشور دل نظام شاهنشاهی</span><span dir="ltr" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">‌</span><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">ست</span><span lang="FA" style="FONT-SIZE: 9pt; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><p></p></span></p>
 <p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">۲۸دی ۱۳۸۶</span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span dir="ltr"></span><span dir="ltr" style="FONT-SIZE: 9pt; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><span dir="ltr"></span>*****</span><span lang="FA" style="FONT-SIZE: 9pt; COLOR: #ccff66; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><p></p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt; COLOR: #92d050; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">آن روز زمین صحنۀ محشر </span><span lang="AR-SA" style="FONT-SIZE: 9pt; COLOR: #92d050; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">می‌شد</span><span lang="FA" style="FONT-SIZE: 9pt; COLOR: #92d050; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><p></p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt; COLOR: #92d050; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">سیراب عطش، علیِّ اکبر می‌</span><span lang="AR-SA" style="FONT-SIZE: 9pt; COLOR: #92d050; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">شد<p></p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="AR-SA" style="FONT-SIZE: 9pt; COLOR: #92d050; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma"><p> </p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="AR-SA" style="FONT-SIZE: 9pt; COLOR: #92d050; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">زینب در و دیوار به یادش آمد<p></p></span></p>
-<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="AR-SA" style="FONT-SIZE: 9pt; COLOR: #92d050; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">ذکرِ دلِ او مادر، مادر می‌شد</span><span lang="AR-SA" style="FONT-SIZE: 9pt; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma"><p></p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span dir="ltr"></span><span dir="ltr" style="FONT-SIZE: 9pt; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><span dir="ltr"></span>*****</span><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><p></p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">آن روز زمین صحنۀ محشر </span><span lang="AR-SA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">می‌شد</span><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA"><p></p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="FA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma; mso-bidi-language: FA">سیراب عطش، علیِّ اکبر می‌</span><span lang="AR-SA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">شد<p></p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="AR-SA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma"><p> </p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="AR-SA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">زینب در و دیوار به یادش آمد<p></p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="AR-SA" style="FONT-SIZE: 9pt;  LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">ذکرِ دلِ او مادر، مادر می‌شد</span><span lang="AR-SA" style="FONT-SIZE: 9pt; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma"><p></p></span></p>
 <p class="MsoNormal" dir="rtl" style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center" align="center"><span lang="AR-SA" style="FONT-SIZE: 9pt; LINE-HEIGHT: 115%; FONT-FAMILY: Tahoma">۲۷دی ۱۳۸۶</span></p></div>
                 
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

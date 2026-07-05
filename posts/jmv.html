@@ -5,21 +5,51 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۳۱۱: هنوز ای وطن؛ از جواد مجابی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۳۱۱: هنوز ای وطن؛ از جواد مجابی</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۲۵ مهر ۱۴۰۲</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۳۱۱: هنوز ای وطن؛ از جواد مجابی</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۲۵ مهر ۱۴۰۲</div>
                 <div><p style="text-align: center;"><span style="font-size:16px;"><img alt="" style="width: 400px; height: 593px;" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1672671162i/75511095.jpg"></span></p>
 <p style="text-align: justify;"><span style="font-size:16px;">تعداد زیادی شعر سپید که بر اساس تاریخ از اواخر سال ۱۳۹۴ تا ۱۳۹۶ نوشته شده است. زبان شعر بسیار ناسلیس است: چه نیازی به جابجایی نهاد و گزاره، فاعل و فعل و مفعول در شعر سپید است وقتی وزن مشخصی وجود ندارد؟ حتی در ذهنم تلاش کردم معادل نحوی نسبتاً درست آن را بازخوانی کنم و به نظرم آمد که اتفاقاً خوش‌خوان‌تر می‌شود. از نظر مضمون واقعاً نمی‌دانم چه بگویم؟ به نظر می‌آید این کتاب حاصل تراوشات ذهنی دوران بازنشستگی باشد (الان دارم سعی می‌کنم حفظ ادب کنم).</span></p></div>
                 <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب-شعر.html">کتاب-شعر</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/نقد شعر.html">نقد شعر</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

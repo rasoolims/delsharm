@@ -5,25 +5,55 @@
             <meta charset="UTF-8">
             <title>بایگانی: آذر ۱۳۹۱ | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="container">
                 <div class="page-header">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <a href="../index.html" style="float: right; font-weight: bold;">← بازگشت</a>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
-                    <hr style="border: 0; border-top: 1px solid #e0e6ed; margin: 20px 0;">
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
                     <h2 style="margin: 0; font-size: 1.5em; text-align: center;">بایگانی نوشته‌ها: آذر ۱۳۹۱</h2>
-                    <p style="color: #7f8c8d; margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
+                    <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
                 </div>
                 <div class="posts-grid">
         <div class="post-card"><div class="card-content"><h2><a href="../posts/تقدیر-ناچار-منی.html">تقدیر ناچار منی</a></h2><div class="date">۲۷ آذر ۱۳۹۱</div><div class="excerpt-container"><p style="margin-bottom: 0in; text-align: center;" dir="rtl"><font face="tahoma,verdana,arial,helvetica,sans-serif">بیهوده
 کوشی مرگ!</font></p><p style="margin-bottom: 0in; text-align: center;" dir="rtl"><font face="tahoma,verdana,arial,helvetica,sans-serif">نامم
 فراموشی‌ست</font></p><p style="margin-bottom: 0in; text-align: center;" dir="rtl"><font face="tahoma,verdana,arial,helvetica,sans-serif"><br></font></p><p style="margin-bottom: 0in; text-align: center;" dir="rtl"><font face="tahoma,verdana,arial,helvetica,sans-serif">در دفتر دل می‌نویسم باز</font></p><p style="margin-bottom: 0in; text-align: center;" dir="rtl">تقدیرِِ ناچارست کوچیدن...<font face="tahoma,verdana,arial,helvetica,sans-serif"><br></font></p><p style="margin-bottom: 0in; text-align: center;" dir="rtl"><font face="tahoma,verdana,arial,helvetica,sans-serif">یاد
 و حسابش را</font></p><p style="margin-bottom: 0in; text-align: center;" dir="rtl"><font face="tahoma,verdana,arial,helvetica,sans-serif">باشد
-برای بعد!</font></p><p style="margin-bottom: 0in; text-align: left;" dir="rtl"><span style="color: rgb(0, 255, 255);"><br></span></p><p style="margin-bottom: 0in; text-align: left;" dir="rtl"><span style="color: rgb(0, 0, 255);"><font face="tahoma,verdana,arial,helvetica,sans-serif">دوشنبه ۱۷ دسامبر ۲۰۱۲</font></span></p><p style="margin-bottom: 0in; text-align: left;" dir="rtl"><span style="color: rgb(0, 0, 255);"><font face="tahoma,verdana,arial,helvetica,sans-serif">منهتن، نیویورک</font></span></p></div><a href="../posts/تقدیر-ناچار-منی.html" class="read-more">ادامه مطلب ←</a></div></div>
+برای بعد!</font></p><p style="margin-bottom: 0in; text-align: left;" dir="rtl"><span style=""><br></span></p><p style="margin-bottom: 0in; text-align: left;" dir="rtl"><span style=""><font face="tahoma,verdana,arial,helvetica,sans-serif">دوشنبه ۱۷ دسامبر ۲۰۱۲</font></span></p><p style="margin-bottom: 0in; text-align: left;" dir="rtl"><span style=""><font face="tahoma,verdana,arial,helvetica,sans-serif">منهتن، نیویورک</font></span></p></div><a href="../posts/تقدیر-ناچار-منی.html" class="read-more">ادامه مطلب ←</a></div></div>
                 </div>
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

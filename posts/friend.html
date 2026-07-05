@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۱۳۶: دوست؛ نوشتهٔ سیگرید نونز | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۱۳۶: دوست؛ نوشتهٔ سیگرید نونز</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۲۸ آذر ۱۳۹۷</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۱۳۶: دوست؛ نوشتهٔ سیگرید نونز</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۲۸ آذر ۱۳۹۷</div>
                 <div><p style="text-align: center;"><a href="//bayanbox.ir/info/2662867847326176604/friend" target="_blank"><img src="//bayanbox.ir/preview/2662867847326176604/friend.jpg"></a></p>
 <p style="text-align: justify;"><font size="3" face="verdana">«بسیاری اوقات کتابی را به محض این که می‌بندم فراموش می‌کنم. بعد به جایی می‌رسد که از خواندن هر داستانی پرهیز می‌کنم و می‌بینم هیچ چیزی از دست نداده‌ام.» (ص ۷۴)</font></p>
 <p style="text-align: justify;"><font size="3" face="verdana">این کتاب حدود یک ماه پیش جایزهٔ سال ۲۰۱۸ کتاب ملی آمریکا در بخش رمان را از آن خود کرده است. این رمان کوتاه حدیث نفس نویسنده‌ای است که خبردار می‌شود دوستش که نویسندهٔ بزرگی بوده و روزگاری استاد نویسندگی‌اش هم بوده خودکشی کرده است. زن که راوی است حتی مدت کوتاهی با مرد که خودکشی کرده است رابطه داشته است و حالا به دلایل تقریباً ناموجهی مجبور است سگ دوستش را در خانهٔ کوچکش در نیویورک نگهداری کند. اینجاست که تردیدهای راوی در مورد زندگی و نوشتن شروع می‌شود. جاهایی از این کتاب شبیه به بریده‌هایی از زندگی یک نویسنده است. همه چیز در مورد زندگی نویسندگی، افول جایگاه داستان در میان جامعه و حتی بالا رفتن آمار خودکشی نویسنده‌ها نوشته شده است. </font></p>
@@ -24,9 +32,31 @@
 <p style="text-align: justify;"><font size="3" face="verdana">خلاصه کنم، این کتاب داستانی است که مانند جمله‌ای که در آغاز نوشتم، با بستنش تمام می‌شود.</font></p>
 <p style="text-align: justify;"><font size="3" face="verdana"><br></font></p>
 <p style="text-align: justify;"><br></p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/کتاب و کتاب‌خوانی.html">کتاب و کتاب‌خوانی</a>، <a href="../tags/کتاب.html">کتاب</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب.html">کتاب</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/کتاب و کتاب‌خوانی.html">کتاب و کتاب‌خوانی</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

@@ -5,23 +5,53 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۲۹۵: نرگس؛ از حسین صفا | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۲۹۵: نرگس؛ از حسین صفا</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۰۷ تیر ۱۴۰۲</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۲۹۵: نرگس؛ از حسین صفا</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۰۷ تیر ۱۴۰۲</div>
                 <div><p style="direction: ltr; "> </p>
 <p style="text-align: center;"><img alt="" style="width: 520px; height: 794px;" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1564995477i/35082931.jpg"></p>
 <p><span style="font-size:16px;">خود کتاب چنگی به دل نزد: شاید به این خاطر که صفا اصل کارش غزل است. اما مقدمهٔ کتاب جالب بود:</span></p>
 <p><span style="font-size:16px;">خواب چند جلد از کتاب تازه‌ام را دیدم. اسم کتاب «دریا» بود با جلدی مشکی. دیدم کتاب‌ها در دستم فرسوده شدند و ورق‌ورق شدند. وزق‌ها از دستم شره می‌کردند.<br>یکی از دوستانم در خوابم بود. به او گفتم: ببین! این اوراق پراکنده، کتاب تازه‌ی من‌اند. گقتم: اسم کتابم دریاست. گفتم: بی‌شک مادرم خوشحال خواهد شد که اسمش را بر کتابم گذاشته‌ام. بیدار که شدم اسم مادرم ترگس بود. پس اسم کتاب تازه‌ام را گذاشتم نرگس.<br>از خواب‌هایم سردرنمی‌آورم. جز یکی:<br>این خواب را سال‌هاست می‌بینم. می‌بینم که از محله‌ی قدیمی‌مان بیرون می‌زنم. خیلی دور نشده‌ام که به کوچه‌باغی می‌رسم. یعد می‌رسم به منظره‌ای باشکوع و لبریز از درختان سبز با جاده‌های حاکی و مارپیچ.<br>شکل ابرهای خوابم را (از بس که این خواب را دیده‌ام) از برم. همه‌جای جنگل را وجب‌به‌وجب می‌شناسم. مخصوصاً دره‌ای را که منتهی می‌شود به دریاچه.<br>در بیداری بارها از خودم پرسیده‌ام که آن بهشت کجاست یا کجا بوده؟ وقتی در آن خوابِ زیبا قدم می‌زنم، و بعد از این‌که زمانی لایتناهی را طی می‌کنم و بیدار می‌شوم، احساس می‌کنم که چیزی در من در حال یادآوری شدن است. چیزی مثل زاییده شدن، مثل متولد شدن.<br>پیش از تولد، من کجا می‌توانسته‌ام بوده باشم جز یک رحِم.<br>دریا گاهی رحِش را به خواب من می‌آورَد: جنگلی در دریا. و پرنده‌ی قدکوتاهی درخواب، در جنگل.<br>پرنده‌ی قدکوتاهی که درخت‌ها او را با انگشت اشاره نشانِ هم می‌دهند.</span></p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب-شعر.html">کتاب-شعر</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/کتاب-شعر.html">کتاب-شعر</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

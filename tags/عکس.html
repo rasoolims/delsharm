@@ -5,21 +5,51 @@
             <meta charset="UTF-8">
             <title>برچسب: عکس | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="container">
                 <div class="page-header">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <a href="../index.html" style="float: right; font-weight: bold;">← بازگشت</a>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
-                    <hr style="border: 0; border-top: 1px solid #e0e6ed; margin: 20px 0;">
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
                     <h2 style="margin: 0; font-size: 1.5em; text-align: center;">نوشته‌های دارای برچسب: عکس</h2>
-                    <p style="color: #7f8c8d; margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
+                    <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
                 </div>
                 <div class="posts-grid">
         <div class="post-card"><a href="../posts/regrading.html"><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1316129273l/441284.jpg" class="card-img" alt="تصویر پست"></a><div class="card-content"><h2><a href="../posts/regrading.html">قفسه‌نوشت ۱۹۵: نظر به درد دیگران؛ از سوزان سونتاگ</a></h2><div class="date">۱۶ آذر ۱۴۰۰</div><div class="excerpt-container"><p style="text-align: justify;"><br><span style="font-size:18px;">این کتاب که در سال ۲۰۰۳ منتشر شده است، جستارهای «سوزان سونتاگ» منتقد و نویسندهٔ شهیر آمریکایی است در مورد نمایش داده شدن رنج انسان‌ها در عکس. از زمانی که عکس‌هایی از جنگ اسپانیا به دست ویرجینیا وولف رسید و او را به تأمل دقیق واداشت تا ۱۱ سپتامبر که تصاویر دهشتناک آن دست به دست شد، تا فضای تعزیهٔ امام حسین که مردم ایران را هر سال به گریه می‌اندازد، همه موضوعات مورد بررسی نویسنده در این کتاب کوتاه است. او در این میانه کنایه‌هایش را به ظلمی که به مردم فلسطین روا شده است و حتی نظام سرمایه‌داری در کتاب جا می‌دهد.</span></p></div><a href="../posts/regrading.html" class="read-more">ادامه مطلب ←</a></div></div>
                 </div>
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

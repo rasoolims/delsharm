@@ -5,21 +5,51 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۲۷۹: فرهنگ، خرد و آزادی؛‌ از رضا داوری اردکانی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۲۷۹: فرهنگ، خرد و آزادی؛‌ از رضا داوری اردکانی</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۱۸ اسفند ۱۴۰۱</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۲۷۹: فرهنگ، خرد و آزادی؛‌ از رضا داوری اردکانی</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۱۸ اسفند ۱۴۰۱</div>
                 <div><p style="text-align: center;"><span style="font-size:16px;"><img alt="" style="width: 400px; height: 595px;" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1665696144i/62985916.jpg"></span></p>
 <p style="text-align: justify;"><span style="font-size:16px;">این کتاب از جمله کتاب‌هایی است که در بازهٔ‌ سال‌های ۱۳۹۱-۱۳۹۳ از سوی نشر سخن منتشر شده است. مجموعهٔ مقالات این کتاب که در ۶۳۰ صفحه گردآوری شده است در مورد مسائل مختلفی مانند آزادی، آموزش، رسانه، توسعه، اسلام و علم است. سطح کیفی مقالات یکسان نیست. مثلاً به نظرم مقاله‌ای که در مورد اسلام در ایران نوشته است خیلی بدیع است و حرف کلی‌اش آن است که برخلاف گفتهٔ برخی از تحلیل‌گران، ایرانی‌ها در مجموع با تمایل اسلام را پذیرفتند چرا که شواهد تاریخی نشان می‌دهد ایرانیان در مقابل تمدن یونانی (سلوکی‌ها) و هجوم مغول‌ها تسلیم نشدند. در مقولهٔ آموزش همگانی نظر داوری اردکانی آن است که نباید این حجم از درس‌های پراکنده به دانش‌آموزان داد که نتیجه‌اش جز زده شدن نسل‌ها از مطالعه و تحقیق نیست چرا که آن همه درس نه به یاد می‌ماند، نه دانش‌آموز فرصت هضم آن همه مطلب را دارد و نه به درد زندگی‌اش نمی‌خورد.<br>قبلاً هم نوشته‌ام که این مجموعه‌ای که نشر سخن از داوری منتشر کرده است در مجموع سطح پایین‌تری از کتاب‌های پیشین داوری مانند «ما و راه دشوار تجدد» و «دربارهٔ غرب» دارد. شاید این طوری باشد که این مقالات را داوری در احوالات مختلف نوشته است و بدون گزینش آن‌ها را منتشر کرده است. کما آن که در بسیاری از مقالات حرف‌های پراکنده و تکرای یافت می‌شود.</span><br> </p></div>
                 <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/فلسفه.html">فلسفه</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

@@ -5,21 +5,51 @@
             <meta charset="UTF-8">
             <title>برچسب: رمان روسی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="container">
                 <div class="page-header">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <a href="../index.html" style="float: right; font-weight: bold;">← بازگشت</a>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
-                    <hr style="border: 0; border-top: 1px solid #e0e6ed; margin: 20px 0;">
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
                     <h2 style="margin: 0; font-size: 1.5em; text-align: center;">نوشته‌های دارای برچسب: رمان روسی</h2>
-                    <p style="color: #7f8c8d; margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
+                    <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
                 </div>
                 <div class="posts-grid">
         <div class="post-card"><a href="../posts/possesed.html"><img src="//bayanbox.ir/preview/2355923602144172718/possesed.jpg" class="card-img" alt="تصویر پست"></a><div class="card-content"><h2><a href="../posts/possesed.html">قفسه‌نوشت ۱۴۱: شیاطین؛ نوشتهٔ فئودور داستایوسکی</a></h2><div class="date">۰۹ بهمن ۱۳۹۷</div><div class="excerpt-container"><p style="text-align: justify; "><font size="3" face="verdana">فئودور داستایوسکی یکی از نام‌آورترین نویسندگان تاریخ ادبیات داستانی است. شاید نشود فهرستی از آثار برتر ادبیات داستانی را یافت که یکی از آثار این نویسندهٔ روس در آن نباشد. داستایوسکی را معمولاً با آثاری مانند «جنایت و مکافات» و «برادران کارامازوف» می‌شناسند، اما جالب آن است که «شیاطین» اثری است که بیشتر مورد استقبال بزرگان ادبیات، روان‌شناسی، و فلسفه قرار گرفته است. آلبر کامو، نویسندهٔ رمان «بیگانه»، شیاطین را جزو پنج اثر برتر ادبی می‌شمارد، ژان پل سارتر بسیاری از اندیشه‌های اگزیستانسیالیسم را از کتاب‌های داستایوسکی الهام گرفته است، فردریچ نیچه فیلسوف بزرگ آلمانی «فراسوی نیک و بد» را با الهام از این رمان نوشته است، و فروید که معتقد است «نویسندگانِ خلاق کاشفان حقیقی ناخودآگاه هستند» بیشتر از هر نویسنده‌ای نظر به آثار داستایوسکی از جمله این کتاب داشته است. </font></p></div><a href="../posts/possesed.html" class="read-more">ادامه مطلب ←</a></div></div>
                 </div>
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

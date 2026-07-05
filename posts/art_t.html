@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۱۶۹: هنر شفاف اندیشیدن؛ نوشته رولف دوبلی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۱۶۹: هنر شفاف اندیشیدن؛ نوشته رولف دوبلی</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۰۳ خرداد ۱۴۰۰</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۱۶۹: هنر شفاف اندیشیدن؛ نوشته رولف دوبلی</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۰۳ خرداد ۱۴۰۰</div>
                 <div><p style="text-align: center;"><span style="font-size:18px;"><span style="font-family:Verdana,Geneva,sans-serif;"><img alt="" style="width: 266px; height: 400px;" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391419999l/18505774.jpg"></span></span></p>
 <p style="text-align: justify;"><span style="font-size:18px;"><span style="font-family:Verdana,Geneva,sans-serif;">ذکر چند گزاره در مورد این کتاب را ضروری می‌دانم:</span></span></p>
 <p style="text-align: justify;"><br><span style="font-size:18px;"><span style="font-family:Verdana,Geneva,sans-serif;">نخست آن که من ترجمهٔ‌ انگلیسی این کتاب را خوانده‌ام و شهرت مترجم فارسی آن تأثیری مثبت یا منفی بر قضاوت من نداشته است.</span></span></p>
@@ -27,9 +35,31 @@
 <p style="text-align: justify;"><span style="font-size:18px;"><span style="font-family:Verdana,Geneva,sans-serif;">آیا کتاب جذابی است؟ برای من که عادت به تندخوانی و یک‌جاخوانی دارم این کتاب سه ماه خواندنش به طول انجامید. به خاطر آن که کتاب «تفکر سریع و کند» را قبلاً خوانده بودم، تقریباً‌ هیچ حرف جدیدی در این کتاب پیدا نکردم. صرفاً خلاصه‌نگاری‌ای بود از آن یکی دیگر. </span></span></p>
 <p style="text-align: justify;"> </p>
 <p style="text-align: justify;"><span style="font-size:18px;"><span style="font-family:Verdana,Geneva,sans-serif;">اما سؤال‌ آخر درگوشی: چرا کتاب‌های مبتذل این قدر در ایران پرطرفدار می‌شوند؟ در آمریکا از این خبرها اگر هم باشد، به غلظت ام‌القرای جهان اسلام! نیست.</span></span><br> </p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/کتاب و کتاب‌خوانی.html">کتاب و کتاب‌خوانی</a>، <a href="../tags/کتاب.html">کتاب</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب.html">کتاب</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/کتاب و کتاب‌خوانی.html">کتاب و کتاب‌خوانی</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

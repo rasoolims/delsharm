@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۷۴: چه کسی بر جهان حاکم است؟؛‌ نوشتهٔ نوام چامسکی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۷۴: چه کسی بر جهان حاکم است؟؛‌ نوشتهٔ نوام چامسکی</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۳۱ خرداد ۱۳۹۷</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۷۴: چه کسی بر جهان حاکم است؟؛‌ نوشتهٔ نوام چامسکی</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۳۱ خرداد ۱۳۹۷</div>
                 <div><div dir="rtl">
 <p style="text-align: justify; "><font size="3" face="verdana">حافظهٔ همهٔ ما آدم‌های "معمولی" کوتاه‌مدت است. مثلاً همیشه از گذشته چیزهای خوب یادمان می‌ماند و به همین خاطر خیلی وقت‌ها حسرت دورهٔ قبل، رئیس جمهور قبل، و حتی گاهی رژیم قبلی را می‌خوریم. در مورد آمریکا این مسأله پررنگ‌تر است، خاصه آن که آمریکا قدرت رسانه‌ای بسیار قوی‌ای دارد. برخلاف آنچه که بعضاً در ناخودآگاه </font><span style="font-family: verdana; font-size: medium;">ذهن </span><span style="font-family: verdana; font-size: medium;">ما قرار می‌گیرد، بسیاری از مردم دنیا از آمریکا دل خوشی ندارند. مثلاً یک بار در خاطراتم در مورد عصبانیت چند جامائیکایی در مورد به رگبار بستن کوچه‌های شهر از سوی هلیکوپیترهای آمریکایی به بهانهٔ یک مجرم جامائیکایی نوشته بودم.</span></p>
 <p style="text-align: center;"><a href="//bayanbox.ir/info/5401927878705980091/who-rules-the-world" target="_blank"><img src="//bayanbox.ir/preview/5401927878705980091/who-rules-the-world.jpg"></a></p>
@@ -98,9 +106,31 @@
 <p style="text-align: justify; "><font size="3" face="verdana">قبل از جنگ جهانی دوم، کشورهایی مثل آلمان و فرانسه مرکز علم و فناوری بودند ولی بعد از جنگ این قدرت به آمریکا تغییر پیدا کرد. اما کماکان بسیاری از آمریکایی‌ها به زندگی سنتی‌ خود ادامه دادند. بسیاری از آنان هنوز بر این اعتقادند که جهان عمری بیشتر از چند هزار سال ندارد، مسیح تا سال ۲۰۵۰ بازخواهد گشت و به همین خاطر بحران محیط زیست محلی از اعراب ندارد. آن‌ها به اقلیت رفتن تدریجی سفیدپوست‌ها را تهدیدی برای آمریکا می‌دانند و همهٔ این‌ها، علاوه بر خستگی از شعارهای تکراری طیف دموکرات، دلیلی برای رأی دادن به ترامپ بوده است. (نقل به مضمون از مؤخره)</font></p>
 <p style="text-align: justify; "><br></p>
 </div></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/کتاب و کتاب‌خوانی.html">کتاب و کتاب‌خوانی</a>، <a href="../tags/کتاب.html">کتاب</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب.html">کتاب</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/کتاب و کتاب‌خوانی.html">کتاب و کتاب‌خوانی</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

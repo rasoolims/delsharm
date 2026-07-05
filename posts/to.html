@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>تو | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">تو</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۰۷ خرداد ۱۴۰۰</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">تو</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۰۷ خرداد ۱۴۰۰</div>
                 <div><p style="text-align: center;"><img alt="" src="https://bayanbox.ir/view/6522604301911336370/IMG-20161027-133640.jpg"></p>
 <p><br><span style="font-size:18px;"><span style="font-family:Verdana,Geneva,sans-serif;">۱.</span></span></p>
 <p><span style="font-size:18px;"><span style="font-family:Verdana,Geneva,sans-serif;">از آینهٔ عقب می‌توانی رد چروک دور چشم‌هایش را ببینی. این تمام چیزی است که آینه در اختیارت گذاشته. ماسک روی صورتش حجاب بینی و لب‌هایش شده است. در عکس‌های اینستاگرامش دیده‌ای که بینی‌اش همان چیزی که آن روزها می‌دیدی نیست. و لابد لب‌هایش نباید مانند عکس‌هایش پررنگ باشد. پشت ماسک که این کارها معنایی ندارد. به در صندلی سمت راست تکیه داده است. لابد این راه چندساعته خسته‌اش کرده است. شاید به دنبال نشانه‌ای از آن نیویورکی که در ذهنش بوده می‌گردد. و تو دوست داری به این فکر کنی شاید او می‌خواهد حرفی را از گوشهٔ نم‌خوردهٔ خاطراتش بیرون بکشد و با تو در میان بگذارد. بالأخره سر صحبت را باید باز کنی.</span></span></p>
@@ -101,6 +109,28 @@
                 <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/داستان-کوتاه.html">داستان-کوتاه</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

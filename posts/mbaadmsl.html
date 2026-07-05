@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۲۸۰: منظومهٔ بازگشت و اشعار دیگر؛ از محمد شمس لنگرودی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۲۸۰: منظومهٔ بازگشت و اشعار دیگر؛ از محمد شمس لنگرودی</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۱۹ اسفند ۱۴۰۱</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۲۸۰: منظومهٔ بازگشت و اشعار دیگر؛ از محمد شمس لنگرودی</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۱۹ اسفند ۱۴۰۱</div>
                 <div><p style="text-align: center;"><span style="font-size:16px;"><img alt="" style="width: 400px; height: 592px;" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1567350803i/26191291.jpg"></span></p>
 <p style="text-align: justify;"><br><span style="font-size:16px;">این کتاب شامل منظومهٔ‌ بازگشت (شعر سپید بلند) و چند شعر سپید کوتاه است. آن چیزی که این دفتر شعر را خاص می‌کند، همان منظومهٔ بازگشت است. ظاهراً شاعر که فرزند آیت‌الله جعفر شمس لنگرودی از علمای به‌نام استاد گیلان است، برای مرگ مادرش به گیلان می‌رود و بعدش دست به کار نوشتن منظومهٔ بازگشت می‌شود که به زعم خودش تداعی بازگشت مادرش به خاک و بازگشت او به لنگرود می‌کند. این منظومه در سال ۱۳۹۲ به اتمام رسیده است.</span></p>
 <p style="text-align: justify;"><span style="font-size:16px;">این منظومه این‌گونه آغاز می‌شود:</span></p>
@@ -54,9 +62,31 @@
 <p style="text-align: justify;"><span style="font-size:16px;">و در آخر نیز عمر را تاک‌تاک خاطره‌های روشنی‌بخش می‌داند:</span></p>
 <p style="text-align: justify;"> </p>
 <p style="text-align: justify;"><span style="font-size:16px;">"ساعت چند بود خدای من آیا ساعت چند بود<br>که نمی‌دانستیم<br>عمر<br>نه تیک‌تاک عقربه‌ها<br>تاک‌تاک سرخ خاطره‌هایی است<br>که به صورت من روشنی می‌بخشد"</span><br> </p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/شعر.html">شعر</a>، <a href="../tags/نقد شعر.html">نقد شعر</a>، <a href="../tags/شعر سپید.html">شعر سپید</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/شعر.html">شعر</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/نقد شعر.html">نقد شعر</a>، <a href="../tags/شعر سپید.html">شعر سپید</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

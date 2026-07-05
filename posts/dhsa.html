@@ -5,22 +5,52 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۳۱۰: دیلماج؛‌ از حمیدرضا شاه‌آبادی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۳۱۰: دیلماج؛‌ از حمیدرضا شاه‌آبادی</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۲۴ مهر ۱۴۰۲</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۳۱۰: دیلماج؛‌ از حمیدرضا شاه‌آبادی</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۲۴ مهر ۱۴۰۲</div>
                 <div><p style="text-align: center;"><span style="font-size:16px;"><img alt="" style="width: 416px; height: 614px;" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1537438506i/2077679.jpg"></span></p>
 <p style="text-align: justify;"><span style="font-size:16px;">از میرزا یوسف مستوفی دیلماج (مترجم) دولت ناصری رساله‌هایی برجای مانده که اطلاعات جالبی در مورد تعاملات او با شخصیت‌های معروف مشروطه مانند فروغی، ملکم‌خان ناظم‌الدوله و اعضای لژ فراماسونری آدمیت وجود دارد. علاوه بر آن رساله‌ای در مورد عشق وجود دارد که گویای اتفاقاتی است که باعث خاطرخواهی و فراق ابدی او می‌شود. این‌ها را ظاهراً نویسنده‌ای به نام آقای ناصری نوشته است و در این رمان مکاتبات این نویسنده با انتشارات و در نهایت با نوهٔ برادر میرزایوسف ثبت شده است. به معنایی دیگر، شاه‌آبادی از فنون روایت پست‌مدرن که تلفیق واقعیت با امر غیرواقعی است استفاده می‌کند که روایت‌گر شخصی خیالی باشد در میان افراد واقعی مشروطه تا نشان بدهد افرادی که درگیر این دوران بوده‌اند چقدر سطحی و مذبذب بودند و چه زود از قامت دیلماجی معمولی به مشروطه‌خواه و سپس ضدمشروطه تغییر یافته‌اند.</span></p>
 <p style="text-align: justify;"><span style="font-size:16px;">نقطهٔ‌ قوت این رمان از نقطهٔ‌ قوت نویسنده ناشی می‌شود و آن دقت تاریخی کار است اما نقطهٔ ضعف رمان کوتاهی بیش از حد آن و زبان آن است که اصلاً تداعی زبان دورهٔ مشروطه نمی‌کند (مقایسه کنید با «بی‌کتابی» از محمدرضا شرفی خبوشان). در مجموع همین کوتاه بودن رمان شاید در این زمانهٔ کتاب‌نخوانی نقطهٔ قوتی باشد که مخاطب کم‌حوصله را میخ‌کوب کند و به او امید اتمام زودهنگام کتاب را بدهد.</span><br> </p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/داستان ایرانی.html">داستان ایرانی</a>، <a href="../tags/نقد داستان.html">نقد داستان</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/رمان فارسی.html">رمان فارسی</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/نقد داستان.html">نقد داستان</a>، <a href="../tags/رمان فارسی.html">رمان فارسی</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/داستان ایرانی.html">داستان ایرانی</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

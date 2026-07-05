@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>شرابه‌های سفر ۲: چیزی نیست که نشود تغییرش داد | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">شرابه‌های سفر ۲: چیزی نیست که نشود تغییرش داد</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۲۳ دی ۱۳۹۴</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">شرابه‌های سفر ۲: چیزی نیست که نشود تغییرش داد</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۲۳ دی ۱۳۹۴</div>
                 <div><p style="text-align: justify;"><font face="verdana" size="3">اولین بار دختر بزرگشان را در یاهو دیدم. برای آمادگی المپیاد دبیرستان‌های امریکا سری به یاهو می‌زد و با توجه به شهرت پدر، کارآموز شدن برایش کار سختی نبود. بعد فهمیدم که مادر، یکی از کارمندان آزمایشگاه ماست و پدر استاد دانشگاه میشیگان. پدر هر هفته به نیویورک سر می‌زند و بعضی اوقات به آزمایشگاه ما می‌آید. مادر ولی در نیویورک و در آزمایشگاه ما مشغول کار است. فاصلهٔ نیویورک به میشیگان هزار کیلومتر ناقابل است. چرا این قدر جدا؟ ذهنم هی می‌رود سراغ تحلیل‌های تخیلی در مورد زوال خانواده در جامعهٔ متجدد امریکایی. ولی این‌ها که بلغار هستند و هنوز رگ و ریشه‌های سنتی‌ دارند. اصلاً به فرض کار برای خانم اصالت داشته باشد، همین کار را می‌توانست در میشیگان انجام دهد. با خودم می‌گویم: شاید به خاطر درس دخترشان است. امسال ولی دخترشان برای تحصیل کارشناسی می‌رود به دانشگاه هاروارد در شهر بوستون. </font></p>
 <p style="text-align: justify;"><font face="verdana" size="3"><br></font></p>
 <p style="text-align: justify;"><font face="verdana" size="3">تا این که یک روز خود مادر به درد دل می‌نشیند. از دو سالگی دختر کوچکشان می‌فهمند بیماری‌ای دارد نادر. بدنش اختلال در تولید تاکسین دارد و این باعث عدم تنظیم قند می‌شود و هزار جور بلای ناپیدا. این بیماری بیشتر در ایتالیا شایع هست آن هم در حد حداکثر ده بیمار. تنها مرکز تخصصی در امریکا که فقط می‌تواند بیمار را یک جورهایی زنده نگه دارد در نیویورک است. من مانده‌ام نیویورک و شوهرم که نمی‌تواند شغلش را رها کند، مجبور است هر هفته با هواپیما بیاید و به ما سر بزند. اوایل فرصت مطالعاتی گرفت ولی فرصت مطالعاتی هم زود تمام شد. می‌پرسم: یعنی هیچ درمانی ندارد؟ توضیح می‌دهد: یک پزشکی در استرالیا ادعاهایی کرده بود که روی چند سگ آزمایشگاهی درمانش مؤثر شده ولی نیاز به داوطلب دارد برای آزمایش روی انسان. تا خواستیم بجنبیم فهمیدیم آن پزشک بازنشسته شده و دیگر طبابت نمی‌کند. حالا دخترمان شده دوازده ساله ولی مجبور است با صندلی چرخدار و کپسول اکسیژن زنده بماند. حالا همیشه باید تنمان بلرزد از این قبض‌های بیمارستانی. فکرش را بکن: پنج هزار دلار ناقابل برای جابجایی بیمار از طبقهٔ اول به طبقه‌های بالاتر بیمارستان آن هم با آسانسور.</font></p>
@@ -22,6 +30,28 @@
                 <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/شرابه‌های سفر.html">شرابه‌های سفر</a>، <a href="../tags/سفرنامهٔ امریکا.html">سفرنامهٔ امریکا</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

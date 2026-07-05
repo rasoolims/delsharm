@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>همسفر شراب (سفرنامهٔ امریکا) - فصل ۱۵ | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">همسفر شراب (سفرنامهٔ امریکا) - فصل ۱۵</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۱۳ مرداد ۱۳۹۲</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">همسفر شراب (سفرنامهٔ امریکا) - فصل ۱۵</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۱۳ مرداد ۱۳۹۲</div>
                 <div><p style="margin-bottom: 0in; text-align: right; direction: rtl;" dir="rtl"><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif">برای خواندن متن به ادامهٔ مطلب مراجعه نمایید! </font></p>
 <p><br></p>
 <img width="549" height="410" src="http://delsharm.persiangig.com/image/ny/15/IMG_1503.JPG"><p>
@@ -344,7 +352,7 @@
 هم نقص ندارد</span>.</font></p>
 <p dir="rtl" style="margin-bottom: 0in;"><br></p>
 <img width="552" height="413" src="http://delsharm.persiangig.com/image/ny/15/IMG_1422.JPG">
-<p dir="rtl" style="margin-bottom: 0in; text-align: center;"><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif"><span lang="hi-IN"><span style="color: rgb(0, 0, 255);">فرصت‌مان آن‌قدر نبود که بتوانیم بیشتر از این عکس بیندازیم</span></span></font></p>
+<p dir="rtl" style="margin-bottom: 0in; text-align: center;"><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif"><span lang="hi-IN"><span style="">فرصت‌مان آن‌قدر نبود که بتوانیم بیشتر از این عکس بیندازیم</span></span></font></p>
 <p dir="rtl" style="margin-bottom: 0in;"><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif"><span lang="hi-IN">دعوت
 می‌کند با او برویم به سمت پارکینگ برای
 سوار شدن</span></font><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif">. <span lang="hi-IN">از
@@ -534,7 +542,7 @@
 <p dir="rtl" style="margin-bottom: 0in;"><br></p>
 <img width="559" height="417" src="http://delsharm.persiangig.com/image/ny/15/IMG_1479.JPG"><p dir="rtl" style="margin-bottom: 0in;"><br></p>
 <img width="556" height="416" src="http://delsharm.persiangig.com/image/ny/15/IMG_1496.JPG">
-<p dir="rtl" style="margin-bottom: 0in; text-align: center;"><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif"><span lang="hi-IN"><span style="color: rgb(0, 0, 255);">پلی که از سمت یادمان لینکلن به سمت ایالت ویرجینیا می‌رود</span></span></font></p>
+<p dir="rtl" style="margin-bottom: 0in; text-align: center;"><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif"><span lang="hi-IN"><span style="">پلی که از سمت یادمان لینکلن به سمت ایالت ویرجینیا می‌رود</span></span></font></p>
 <p dir="rtl" style="margin-bottom: 0in; text-align: center;"><br></p>
 <img width="555" height="739" src="http://delsharm.persiangig.com/image/ny/15/IMG_1499.JPG"><p dir="rtl" style="margin-bottom: 0in;"><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif"><span lang="hi-IN"><br></span></font></p>
 <img width="557" height="417" src="http://delsharm.persiangig.com/image/ny/15/IMG_1502.JPG"><p dir="rtl" style="margin-bottom: 0in;"><font size="2" face="tahoma,verdana,arial,helvetica,sans-serif"><span lang="hi-IN"><br></span></font></p>
@@ -591,6 +599,28 @@
                 <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/سفرنامهٔ نیویورک.html">سفرنامهٔ نیویورک</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

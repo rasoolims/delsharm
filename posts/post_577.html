@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>سیاه‌مشق ۱۳ | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">سیاه‌مشق ۱۳</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۳۱ فروردین ۱۳۸۸</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">سیاه‌مشق ۱۳</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۳۱ فروردین ۱۳۸۸</div>
                 <div><div class="postbody"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta content="Word.Document" name="ProgId"><meta content="Microsoft Word 12" name="Generator"><meta content="Microsoft Word 12" name="Originator"><link href="file:///C:\DOCUME~1\user\LOCALS~1\Temp\msohtmlclip1\01\clip_filelist.xml" rel="File-List"/><link href="file:///C:\DOCUME~1\user\LOCALS~1\Temp\msohtmlclip1\01\clip_themedata.thmx" rel="themeData"/><link href="file:///C:\DOCUME~1\user\LOCALS~1\Temp\msohtmlclip1\01\clip_colorschememapping.xml" rel="colorSchemeMapping"/><!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
@@ -442,10 +450,10 @@ div.Section1
 <p align="center" dir="rtl" style="text-align: center; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">با مسیر اشک‌ها رفتند تا
 دریا</span></p>
 <p align="center" dir="rtl" style="text-align: center; direction: rtl; unicode-bidi: embed;"><span lang="FA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"=""> </span></p>
-<p align="center" dir="rtl" style="text-align: center; direction: rtl; unicode-bidi: embed; color: rgb(255, 0, 0);"><span lang="FA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">جمعه 5 تیر
+<p align="center" dir="rtl" style="text-align: center; direction: rtl; unicode-bidi: embed; "><span lang="FA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">جمعه 5 تیر
 1388</span><span dir="ltr" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"=""></span></p>
-<p align="center" dir="rtl" style="text-align: center; direction: rtl; unicode-bidi: embed;"><span 176,="" 80);"="" color:="" lang="FA" rgb(0,="" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";=""><span style="color: rgb(0, 255, 0);">****</span></span><span 176,="" 80);"="" color:="" dir="ltr" rgb(0,="" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";=""></span></p>
-<p dir="rtl" style="text-align: justify; direction: rtl; unicode-bidi: embed; color: rgb(0, 0, 255);"><span lang="FA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">پی‌نوشت (بدون شرح):</span></p>
+<p align="center" dir="rtl" style="text-align: center; direction: rtl; unicode-bidi: embed;"><span 176,="" 80);"="" "" lang="FA" rgb(0,="" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";=""><span style="">****</span></span><span 176,="" 80);"="" "" dir="ltr" rgb(0,="" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";=""></span></p>
+<p dir="rtl" style="text-align: justify; direction: rtl; unicode-bidi: embed; "><span lang="FA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">پی‌نوشت (بدون شرح):</span></p>
 <p dir="rtl" style="text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">قرآن به اين وسيله مؤمنين و مسلمين را بيدار می‏كند كه توجه‏
 داشته باشيد در داخل خود شما، از متظاهران به اسلام، افراد و دسته‌جاتی‏ هستند كه
 دنبال مقصدها و هدفهای خطرناك می‏باشند، يعنی قرآن می‏خواهد بگويد قصه ساختن اين
@@ -493,14 +501,36 @@ div.Section1
 چشمها را به هم ماليدند </span><span dir="ltr" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">: </span><span lang="AR-SA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">از يك طرف آنها را شناختيم و از طرف ديگر
 خودمان را شناختيم. ما چرا چنين اشتباه بزرگی را مرتكب شديم، چرا ابزار دست اينها
 شديم ؟</span><span dir="ltr" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"=""> !</span><span lang="AR-SA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"=""></span></p>
-<p align="right" dir="rtl" style="text-align: left; direction: rtl; unicode-bidi: embed; color: rgb(255, 255, 0);"><span lang="AR-SA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">شهید مرتضی مطهری</span></p>
-<p align="right" dir="rtl" style="text-align: left; direction: rtl; unicode-bidi: embed; color: rgb(255, 255, 0);"><span lang="AR-SA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">آشنایی با قرآن4 (تفسیر سورۀ
+<p align="right" dir="rtl" style="text-align: left; direction: rtl; unicode-bidi: embed; "><span lang="AR-SA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">شهید مرتضی مطهری</span></p>
+<p align="right" dir="rtl" style="text-align: left; direction: rtl; unicode-bidi: embed; "><span lang="AR-SA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";"="">آشنایی با قرآن4 (تفسیر سورۀ
 نور)- صص 30-33</span></p>
-<p align="right" dir="rtl" style="text-align: left; direction: rtl; unicode-bidi: embed;"><span color:="" lang="FA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";="" yellow;"=""> </span></p>
+<p align="right" dir="rtl" style="text-align: left; direction: rtl; unicode-bidi: embed;"><span "" lang="FA" style="font-size: 10pt; line-height: 115%; font-family: " tahoma","sans-serif";="" yellow;"=""> </span></p>
 </meta></meta></meta></meta></div></div>
                 <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/سیاه‌مشق.html">سیاه‌مشق</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

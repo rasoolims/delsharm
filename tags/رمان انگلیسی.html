@@ -5,21 +5,51 @@
             <meta charset="UTF-8">
             <title>برچسب: رمان انگلیسی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="container">
                 <div class="page-header">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <a href="../index.html" style="float: right; font-weight: bold;">← بازگشت</a>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
-                    <hr style="border: 0; border-top: 1px solid #e0e6ed; margin: 20px 0;">
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
                     <h2 style="margin: 0; font-size: 1.5em; text-align: center;">نوشته‌های دارای برچسب: رمان انگلیسی</h2>
-                    <p style="color: #7f8c8d; margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
+                    <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
                 </div>
                 <div class="posts-grid">
         <div class="post-card"><a href="../posts/buried_giant.html"><img src="//bayanbox.ir/preview/3459812755915175657/buried.jpg" class="card-img" alt="تصویر پست"></a><div class="card-content"><h2><a href="../posts/buried_giant.html">قفسه‌نوشت ۱۴۰: غول مدفون؛ نوشتهٔ کازوئو ایشی‌گورو</a></h2><div class="date">۱۶ دی ۱۳۹۷</div><div class="excerpt-container"><p style="text-align: justify;"><font size="3" face="verdana">بعد از مرگ شاه آرتور، پادشاه بریتانیا در قرون پنجم و ششم، بریتانیایی‌ها از مسألهٔ عجیبی رنج می‌برند. در شهر مه‌ای وجود دارد که باعث فراموشی شده است. حالا اکسل و همسرش بیتریس به فکر آن هستند که به دنبال پسر گمشده‌شان بروند. آن‌ها هیچ حافظه‌ای از گذشته‌شان ندارند و حتی دقیقاً نمی‌دانند چرا پسرشان رهایشان کرده است. آن‌ها در مسیر به اقوام ساکسون (ژرمن‌های مهاجر در بریتانیا و دشمنان بریتانیایی‌ها) می‌خورند و همراه با جنگاوری ساکسون که در بریتانیا بزرگ شده است و نوجوانی ساکسون به سفر خود ادامه می‌دهند تا در راه به غولی پیر برمی‌خورند و درمی‌یابند که این غول پیر وقتی نفس می‌کشد، غبار نفسش باعث فراموشی می‌شود. جنگاور ساکسون بر آن است که غول پیر را بکشد اما نجیب‌زاده‌ای بریتانیایی مقاومت می‌کند. اما مسألهٔ اصلی داستان این است که آیا غول فراموشی خوب است یا نه؟ بیتریس می‌ترسد اگر فراموشی از بین برود و او و شوهرش بدی‌های گذشته را به یاد بیاورند، این عشق محکم بین‌شان از بین برود. نجیب‌زاده می‌ترسد که با از بین رفتن فراموشی همهٔ کینه‌ها و خون‌‌های ریخته‌شدهٔ ساکسون‌ها به یادشان بیاید و همین موجب جنگ و تلخی دوباره شود. به قول بیتریس «شاید این فراموشی موجب التیام زخم‌های ناسور شده باشد.» پنداری که خاطرات تلخ گذشته مثل غول مدفونی است که در جامعه وجود دارد و اگر به یاد امروزی‌ها بیفتد عواقب تلخی را در پی خواهد داشت.</font></p></div><a href="../posts/buried_giant.html" class="read-more">ادامه مطلب ←</a></div></div>
                 </div>
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

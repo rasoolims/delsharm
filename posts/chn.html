@@ -5,23 +5,53 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۳۵۹: کریسمس در نیاوران؛ از مهدی خانعلی‌زاده | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۳۵۹: کریسمس در نیاوران؛ از مهدی خانعلی‌زاده</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۰۹ مرداد ۱۴۰۴</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۳۵۹: کریسمس در نیاوران؛ از مهدی خانعلی‌زاده</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۰۹ مرداد ۱۴۰۴</div>
                 <div><p style="text-align: center;"><img alt="" style="width: 287px; height: 420px;" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1753596828i/239368271.jpg"></p>
 <p style="text-align: justify;"><span style="font-size:14px;">کتاب دو بخش دارد: بازخوانی اظهارات آمریکایی‌ها در جهت اثبات آن‌که دولت کارتر قبل و پس از انقلاب اسلامی، با تمام وجود پشت محمدرضا پهلوی ایستاد. دوم رونوشت اسناد کشف‌شدهٔ سفارت در مورد نهضت آزادی.<br>اول از همه: نیمچه‌شکسته‌نویسی ترجمهٔ مصاحبه‌ها آزاردهنده است (ای کاش حداقل درست شکسته‌نویسی می‌شد) . این متن از نداشتن ویراستار رنج می‌برد: ظاهراً ویراستار عنصر نایابی است یا حتی می‌شود گفت بعضی در شأن خود نمی‌بینند ویراستار داشته باشند.<br>دوم آن که مثلاً این کتاب تاریخ است. این مقدار از سوگیری عجیب نیست؟ حتی دلش نیامده یک جای گفتهٔ آمریکایی‌ها کلمهٔ امام را از اسم خمینی بردارد.<br>سوم آن که خط روایی کتاب به شدت پراکنده و شلخته است.</span></p>
 <p><span style="font-size:14px;">پی‌نوشت: فرصت نوشتن در مورد خوانده‌هایم ندارم، اما حیفم آمد کتاب «ده غلط مشهور دربارهٔ اسرائیل» از «ایلان پاپه» را که اخیراً خوانده‌ام پیشنهاد نکنم.</span></p>
 <p style="text-align: center;"><span style="font-size:14px;"><img alt="" style="width: 300px; height: 448px;" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1620919253i/58032828.jpg"></span><br> </p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب تاریخی.html">کتاب تاریخی</a>، <a href="../tags/اسرائیل.html">اسرائیل</a>، <a href="../tags/فلسطین.html">فلسطین</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/تاریخ ایران.html">تاریخ ایران</a>، <a href="../tags/تاریخ معاصر.html">تاریخ معاصر</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/تاریخ معاصر.html">تاریخ معاصر</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/اسرائیل.html">اسرائیل</a>، <a href="../tags/کتاب تاریخی.html">کتاب تاریخی</a>، <a href="../tags/فلسطین.html">فلسطین</a>، <a href="../tags/تاریخ ایران.html">تاریخ ایران</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

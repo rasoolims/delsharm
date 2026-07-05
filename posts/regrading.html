@@ -5,23 +5,53 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۱۹۵: نظر به درد دیگران؛ از سوزان سونتاگ | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۱۹۵: نظر به درد دیگران؛ از سوزان سونتاگ</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۱۶ آذر ۱۴۰۰</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۱۹۵: نظر به درد دیگران؛ از سوزان سونتاگ</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۱۶ آذر ۱۴۰۰</div>
                 <div><p style="text-align: center;"><span style="font-size:18px;"><img alt="" style="width: 317px; height: 475px;" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1316129273l/441284.jpg"></span></p>
 <p style="text-align: justify;"><br><span style="font-size:18px;">این کتاب که در سال ۲۰۰۳ منتشر شده است، جستارهای «سوزان سونتاگ» منتقد و نویسندهٔ شهیر آمریکایی است در مورد نمایش داده شدن رنج انسان‌ها در عکس. از زمانی که عکس‌هایی از جنگ اسپانیا به دست ویرجینیا وولف رسید و او را به تأمل دقیق واداشت تا ۱۱ سپتامبر که تصاویر دهشتناک آن دست به دست شد، تا فضای تعزیهٔ امام حسین که مردم ایران را هر سال به گریه می‌اندازد، همه موضوعات مورد بررسی نویسنده در این کتاب کوتاه است. او در این میانه کنایه‌هایش را به ظلمی که به مردم فلسطین روا شده است و حتی نظام سرمایه‌داری در کتاب جا می‌دهد.</span></p>
 <p style="text-align: justify;"> </p>
 <p style="text-align: justify;"><span style="font-size:18px;">اگر سونتاگ زنده می‌ماند و اینستاگرام را می‌دید، احتمالاً کتابی می‌نوشت با عنوان «نظر به خوشی‌های ساختگی دیگران»!</span><br> </p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/عکس.html">عکس</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/کتاب و کتاب‌خوانی.html">کتاب و کتاب‌خوانی</a>، <a href="../tags/کتاب.html">کتاب</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب و کتاب‌خوانی.html">کتاب و کتاب‌خوانی</a>، <a href="../tags/کتاب.html">کتاب</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/عکس.html">عکس</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

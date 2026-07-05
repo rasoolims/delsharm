@@ -5,16 +5,24 @@
             <meta charset="UTF-8">
             <title>قفسه‌نوشت ۲۴۶: اتاق بر آب راه می‌روم؛ از علی باباچاهی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="single-post-container">
                 <div class="page-header" style="margin-bottom: 30px;">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
                 </div>
                 <a href="../index.html" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a>
-                <h2 style="border-bottom: 2px solid #eee; padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۲۴۶: اتاق بر آب راه می‌روم؛ از علی باباچاهی</h2>
-                <div class="date" style="color: #95a5a6; font-size: 0.9em; margin-bottom: 20px;">۱۸ آبان ۱۴۰۱</div>
+                <h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">قفسه‌نوشت ۲۴۶: اتاق بر آب راه می‌روم؛ از علی باباچاهی</h2>
+                <div class="date" style="color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px;">۱۸ آبان ۱۴۰۱</div>
                 <div><p style="text-align: center;"><span style="font-size:18px;"><img alt="" style="width: 318px; height: 473px;" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1667933520l/63256842._SX318_.jpg"></span></p>
 <p style="text-align: justify;"><span style="font-size:18px;">سابق بر این که به عبارتی می‌شود دورهٔ دبیرستان و اوایل دورهٔ کارشناسی، به خاطر تأثیری که حضور در جلسات ادبی پر از نوگرایان در من داشت، اندک شبه‌لذتی از این سبک ادبی که بیشترش بازی زبانی است می‌بردم. اما الان هر چه بالا پایین می‌کنم از این دست شعرها و شاعرها که کم هم نیستند و به نحوی تالی فاسد جریان نوگرای بعد از شاملو بودند، هیچ خوشم نمی‌آید. گویا بازی زبانی و نوبازی و البته نقدهای پرطمطراق نوشتن و حرف از پست‌مدرنیسم زدن شأنش بالاتر از این باشد که سعی بشود خیال‌انگیزی و زیبایی شعر، همان‌گونه که در سنت ادبی ما بود، و مهم‌تر از همه ارتباط با عامهٔ کتاب‌خوان جدی حفظ شود.</span></p>
 <p style="text-align: justify;"> </p>
@@ -24,9 +32,31 @@
 <p style="text-align: justify;"></p>
 <p style="text-align: justify;"> </p>
 <p><span style="font-size:18px;">اتاق     این    این اتاق<br>آب‌های رها شده تا سقف<br>بازی‌های پر دلهره با سقف<br>در باز نمی‌شود:    (هل نده بی‌فایده‌ست<br>                                    تکان نمی‌خورم از جا!<br>من<br>من راه می‌روم و جبراً<br>بر / در آب<br>اتاق بر آب راه می‌روم!<br>و کمی بعد ـــــ</span><br> </p></div>
-                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب-شعر.html">کتاب-شعر</a>، <a href="../tags/شعر.html">شعر</a>، <a href="../tags/نقد شعر.html">نقد شعر</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a></div>
+                <div class="post-tags"><strong>برچسب‌ها:</strong> <a href="../tags/کتاب-شعر.html">کتاب-شعر</a>، <a href="../tags/شعر.html">شعر</a>، <a href="../tags/قفسه‌نوشت.html">قفسه‌نوشت</a>، <a href="../tags/نقد شعر.html">نقد شعر</a></div>
                 
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         

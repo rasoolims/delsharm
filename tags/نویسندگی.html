@@ -5,21 +5,51 @@
             <meta charset="UTF-8">
             <title>برچسب: نویسندگی | دلشــرم</title>
             <link rel="stylesheet" href="../style.css">
+            
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
         </head>
         <body>
             <div class="container">
                 <div class="page-header">
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button>
                     <a href="../index.html" style="float: right; font-weight: bold;">← بازگشت</a>
                     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">دلشــرم</a></h1>
-                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
-                    <hr style="border: 0; border-top: 1px solid #e0e6ed; margin: 20px 0;">
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;">محمدصادق رسولی</p>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
                     <h2 style="margin: 0; font-size: 1.5em; text-align: center;">نوشته‌های دارای برچسب: نویسندگی</h2>
-                    <p style="color: #7f8c8d; margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
+                    <p style="color: var(--text-muted); margin-top: 5px; font-size: 0.9em; text-align: center;">۱ نوشته یافت شد</p>
                 </div>
                 <div class="posts-grid">
         <div class="post-card"><a href="../posts/selfediting.html"><img src="//bayanbox.ir/preview/7523948034068363144/selfediting.jpg" class="card-img" alt="تصویر پست"></a><div class="card-content"><h2><a href="../posts/selfediting.html">قفسه‌نوشت ۲۳: خودویراستاری برای داستان‌نویسان؛ نوشتهٔ رنی برون و دیو کینگ</a></h2><div class="date">۲۷ بهمن ۱۳۹۶</div><div class="excerpt-container"><p style="text-align: justify; "><span style="font-family: verdana; font-size: medium;">این بار دومی است که این کتاب را می‌خوانم. برخلاف بیشتر کتاب‌ها در این موضوع، که به جای تدریس امور کاربردی، خاطره‌گویی نویسندهٔ کتاب است و کلی درس اخلاقی که فلان ساعت صبح از خواب بیدار شوید و قس علی هذا، این کتاب از دو ویراستار حرفه‌ای است و با دادن مثال‌هایی گویا، دوازده درس کاربردی در مورد ویرایش داستان می‌دهد. وقتی که این کتاب را برای بار دوم خواندم، متوجه شدم که چرا از بسیاری از رمان‌های (عموماً ایرانی) که اخیراً خواندم خوشم نیامد. متأسفانه بسیاری از نویسنده‌ها به این نکات دقیق توجه کافی ندارند. و البته بیشتر متوجه شدم که چرا خواندن بسیاری از داستان‌های کلاسیک (با وجود آن که از نظر مضمونی عمیق‌تر از بسیاری از رمان‌های امروزی هستند)، اینقدر دشوار است.</span></p></div><a href="../posts/selfediting.html" class="read-more">ادامه مطلب ←</a></div></div>
                 </div>
             </div>
+            
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        updateIcon();
+        
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark-mode');
+            const isDark = document.documentElement.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon();
+        });
+    </script>
+    
         </body>
         </html>
         
