@@ -90,71 +90,6 @@
         gap: 25px; 
     }
 
-    /* --------------------------------------------------------
-       MOBILE LAYOUT: Full width posts, horizontal scrollable navs
-       -------------------------------------------------------- */
-    @media (max-width: 850px) {
-        .main-layout { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 20px; 
-        }
-        
-        /* Turn the sidebar into a top navigation container */
-        .sidebar-area { 
-            order: -1; /* Forces it to the top */
-            width: 100%; 
-            position: static; 
-            padding: 10px 0; /* Remove side padding to let scroll bleed to edges */
-            background: transparent; 
-            box-shadow: none;
-        }
-        
-        .content-area { 
-            width: 100%; 
-        }
-        
-        .posts-grid { 
-            grid-template-columns: 1fr; 
-        } 
-        
-        /* Force horizontal scrolling */
-        .tags-grid {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            gap: 10px;
-        }
-        
-        /* Hide scrollbars for a clean, native app feel */
-        .tags-grid::-webkit-scrollbar {
-            display: none;
-        }
-        .tags-grid {
-            -ms-overflow-style: none; 
-            scrollbar-width: none; 
-        }
-
-        /* Keep tiles original size but don't let them shrink */
-        .tag-tile, .baygani-tile {
-            flex: 0 0 auto;
-        }
-
-        .section-title {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            padding: 0 10px; /* Keep title aligned if container padding is 0 */
-            border-bottom: none;
-            margin-top: 15px;
-        }
-    }
-    /* -------------------------------------------------------- */
-    
     .tags-grid { 
         display: flex; 
         flex-wrap: wrap; 
@@ -293,4 +228,64 @@
         position: absolute; top: 25px; left: 25px; background: var(--toggle-bg); color: var(--toggle-color); border: none; font-size: 20px; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, background 0.3s ease, opacity 0.2s ease; z-index: 10;
     }
     .theme-toggle-btn:hover { transform: scale(1.1); opacity: 0.9; }
+
+    /* --------------------------------------------------------
+       MOBILE LAYOUT (Placed correctly at the bottom to override)
+       -------------------------------------------------------- */
+    @media (max-width: 850px) {
+        .main-layout { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px; 
+        }
+        
+        .sidebar-area { 
+            order: -1; 
+            width: 100%; 
+            position: static; 
+            padding: 10px 0; 
+            background: transparent; 
+            box-shadow: none;
+        }
+        
+        .content-area { 
+            width: 100%; 
+        }
+        
+        .posts-grid { 
+            grid-template-columns: 1fr; 
+        } 
+        
+        /* Force single line scrolling */
+        .tags-grid {
+            flex-wrap: nowrap !important; /* Forces it into a single line */
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        /* Hide scrollbars for Chrome/Safari */
+        .tags-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Prevent the tiles from squishing together */
+        .tag-tile, .baygani-tile {
+            flex: 0 0 auto !important; 
+            white-space: nowrap !important; /* Stops text from breaking to two lines */
+        }
+
+        .section-title {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            padding: 0 10px; 
+            border-bottom: none;
+            margin-top: 15px;
+        }
+    }
     
