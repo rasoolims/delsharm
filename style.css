@@ -1,6 +1,11 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
 
+    /* This fixes the title bar overflowing and half-aligning on mobile */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
     :root {
         --bg-body: #f0f2f5;
         --bg-container: #ffffff;
@@ -47,9 +52,9 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }
     
-    .container { max-width: 1200px; margin: auto; }
+    .container { max-width: 1200px; margin: auto; width: 100%; }
     
-    .page-header { position: relative; background: var(--bg-container); padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 40px; text-align: center; }
+    .page-header { position: relative; background: var(--bg-container); padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 40px; text-align: center; width: 100%; }
     
     h1, h2 { color: var(--text-heading); }
     h1 { margin: 0; font-size: 2.2em; }
@@ -64,8 +69,8 @@
     .sidebar-area { flex: 1; min-width: 300px; background: var(--bg-container); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); position: sticky; top: 20px; }
     
     @media (max-width: 850px) {
-        .main-layout { flex-direction: column; }
-        .sidebar-area { width: 100%; position: static; box-sizing: border-box; margin-top: 20px;}
+        /* I removed flex-direction: column so the tags stay on the left on the first page */
+        .sidebar-area { position: static; min-width: 150px; }
     }
     
     .tags-grid { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -114,7 +119,7 @@
     .read-more { margin-top: auto; align-self: flex-start; font-weight: bold; font-size: 0.9em; padding: 8px 16px; background: var(--btn-bg); border-radius: 6px; color: #2980b9; transition: background 0.2s; }
     .read-more:hover { background: var(--btn-hover); text-decoration: none;}
     
-    .single-post-container { max-width: 800px; margin: auto; background: var(--bg-container); padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .single-post-container { max-width: 800px; margin: auto; background: var(--bg-container); padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); width: 100%; }
     .single-post-container div img { display: block; margin: 20px auto; max-width: 100%; height: auto; border-radius: 8px;}
     .single-post-container p { margin-bottom: 10px; }
     .post-tags { font-size: 0.85em; color: var(--text-muted); margin-top: 40px; padding-top: 15px; border-top: 1px dashed var(--border-color); }
@@ -128,7 +133,6 @@
     .page-numbers a:hover { background: var(--btn-hover); }
     .page-numbers .current-page { background: #2980b9; color: white; font-weight: bold; cursor: default; }
 
-    /* --- FONT OVERRIDE FIXES --- */
     /* Force clean styles on single post content */
     .post-content-body { font-size: 16px !important; }
     .post-content-body font,
@@ -148,7 +152,7 @@
         background-color: transparent !important;
     }
     
-    /* Force clean styles on previews in the tiles (Index, Tags, Baygani) */
+    /* Force clean styles on previews in the tiles */
     .excerpt-container { font-size: 15px !important; }
     .excerpt-container font,
     .excerpt-container span,
