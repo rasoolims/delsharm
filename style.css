@@ -128,10 +128,37 @@
     .page-numbers a:hover { background: var(--btn-hover); }
     .page-numbers .current-page { background: #2980b9; color: white; font-weight: bold; cursor: default; }
 
-    /* Force clean styles on ALL elements in the post content */
-    .single-post-container, .single-post-container * {
+    /* --- FONT OVERRIDE FIXES --- */
+    /* Force clean styles on single post content */
+    .post-content-body { font-size: 16px !important; }
+    .post-content-body font,
+    .post-content-body span,
+    .post-content-body p,
+    .post-content-body div,
+    .post-content-body * {
         color: var(--text-main) !important;
         font-family: 'Vazirmatn', sans-serif !important;
+        font-size: 16px !important;
+        line-height: 1.8 !important;
+        background-color: transparent !important;
+    }
+    .post-content-body h1, .post-content-body h2, .post-content-body h3 {
+        color: var(--text-heading) !important;
+        font-family: 'Vazirmatn', sans-serif !important;
+        background-color: transparent !important;
+    }
+    
+    /* Force clean styles on previews in the tiles (Index, Tags, Baygani) */
+    .excerpt-container { font-size: 15px !important; }
+    .excerpt-container font,
+    .excerpt-container span,
+    .excerpt-container p,
+    .excerpt-container div,
+    .excerpt-container * {
+        color: var(--text-main) !important;
+        font-family: 'Vazirmatn', sans-serif !important;
+        font-size: 15px !important;
+        line-height: 1.8 !important;
         background-color: transparent !important;
     }
 
