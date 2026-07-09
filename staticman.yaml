@@ -2,7 +2,7 @@ comments:
   allowedFields:
     - name
     - message
-  branch: "main"
+  branch: "master"
   commitMessage: "نظری جدید از {fields.name}"
   filename: "comment_{@timestamp}"
   format: "json"
