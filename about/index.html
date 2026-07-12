@@ -1,2 +1,25 @@
-<!DOCTYPE html><html lang="fa" dir="rtl" data-astro-cid-ta2fbyqs><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>درباره من | محمدصادق رسولی</title><style>body{color:#333;background-color:#f8f9fa;font-family:Tahoma,Vazirmatn,sans-serif;line-height:1.8}.container[data-astro-cid-ta2fbyqs]{background:#fff;border-radius:12px;max-width:800px;margin:50px auto;padding:30px;box-shadow:0 4px 15px #0000000d}h1[data-astro-cid-ta2fbyqs],h2[data-astro-cid-ta2fbyqs]{color:#2c3e50}a[data-astro-cid-ta2fbyqs]{color:#3498db;text-decoration:none}a[data-astro-cid-ta2fbyqs]:hover{text-decoration:underline}
-</style></head><body data-astro-cid-ta2fbyqs><div class="container" data-astro-cid-ta2fbyqs><a href="/delsharm/" style="display: inline-block; margin-bottom: 20px;" data-astro-cid-ta2fbyqs>← بازگشت به صفحه اصلی</a><h1 data-astro-cid-ta2fbyqs>درباره من</h1><p data-astro-cid-ta2fbyqs>سلام! من محمدصادق رسولی هستم...</p><h2 data-astro-cid-ta2fbyqs>راه‌های ارتباطی</h2><ul data-astro-cid-ta2fbyqs><li data-astro-cid-ta2fbyqs><strong data-astro-cid-ta2fbyqs>ایمیل:</strong> rasoolims [at] gmail [dot] com</li><li data-astro-cid-ta2fbyqs><strong data-astro-cid-ta2fbyqs>لینکدین:</strong> <a href="#" target="_blank" data-astro-cid-ta2fbyqs>پروفایل من</a></li></ul></div></body></html>
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>درباره من | محمدصادق رسولی</title><!-- Initialize dark mode immediately to prevent flashing --><script>
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script><link rel="stylesheet" href="/delsharm/_astro/global.C3hN6LNo.css"></head><body><!-- Using the same container class as your blog posts --><div class="single-post-container"><!-- The same header used across your site --><div class="page-header" style="margin-bottom: 30px;"><button id="theme-toggle" class="theme-toggle-btn" aria-label="تغییر تم">🌙</button><h1><a href="/delsharm/" style="color: inherit; text-decoration: none;">دلشرم</a></h1><p style="color: var(--text-muted); margin-top: 10px; font-size: 1.1em;"><a href="/delsharm/about" style="text-decoration: underline; color: inherit;">محمدصادق رسولی</a></p></div><a href="/delsharm/" style="display: inline-block; margin-bottom: 20px; font-weight: bold;">← بازگشت به صفحه اصلی</a><h2 style="border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin-top: 10px;">درباره من</h2><!-- The post-content-body class ensures your font sizes and colors match the blog --><div class="post-content-body"><p>سلام! من محمدصادق رسولی هستم... (متن بیوگرافی خود را اینجا بنویسید)</p><h2 style="margin-top: 40px; margin-bottom: 15px;">راه‌های ارتباطی</h2><ul><li><strong>ایمیل:</strong> rasoolims [at] gmail [dot] com</li><li><strong>لینکدین:</strong> <a href="#" target="_blank">پروفایل من</a></li></ul></div></div><!-- Script for the dark mode toggle button --><script>
+        const themeBtn = document.getElementById('theme-toggle');
+        
+        function updateIcon() {
+            if (document.documentElement.classList.contains('dark-mode')) {
+                themeBtn.innerHTML = '☀️';
+            } else {
+                themeBtn.innerHTML = '🌙';
+            }
+        }
+        
+        if(themeBtn) {
+            updateIcon();
+            themeBtn.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark-mode');
+                const isDark = document.documentElement.classList.contains('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateIcon();
+            });
+        }
+    </script></body></html>
